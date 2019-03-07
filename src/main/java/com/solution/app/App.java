@@ -9,6 +9,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+import java.util.Scanner;
+
 
 @EnableJpaRepositories(basePackages = "com.solution.repository")
 @ComponentScan(basePackages= "com.solution")
@@ -19,12 +21,15 @@ public class App {
 
     public static void main(String[] args) {
        // SpringApplication.run(App.class, args);
-        callFlexionUrl();
+        Scanner scanner = new Scanner(System.in);
+        if(scanner.hasNext()) {
+            callFlexionUrl(scanner.next());
+        }
     }
 
-    private static void callFlexionUrl(){
+    private static void callFlexionUrl(String itemId){
         WebIntegration webIntegration = new WebIntegration();
-        Purchase purchase = webIntegration.buy("pen");
+        Purchase purchase = webIntegration.buy(itemId);
         webIntegration.consume(purchase);
         System.out.println(webIntegration.getPurchases());
     }
