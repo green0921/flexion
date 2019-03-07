@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GetAllController {
-    //private static final String REQUEST_MAPPING = "http://sandbox.flexionmobile.com/javachallenge/rest/developer/{developerId}/all";
     private static final String REQUEST_MAPPING = "{developerId}/all";
 
     @Autowired

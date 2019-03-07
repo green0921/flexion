@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class BuyController {
-   // private static final String REQUEST_MAPPING = "http://sandbox.flexionmobile.com/javachallenge/rest/developer/{developerId}/buy/{itemId}";
     private static final String REQUEST_MAPPING = "{developerId}/buy/{itemId}";
 
     @Autowired

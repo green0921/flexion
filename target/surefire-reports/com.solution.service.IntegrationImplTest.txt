@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.solution.service.IntegrationImplTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.078 s <<< FAILURE! - in com.solution.service.IntegrationImplTest
-testIntegrationRunWithoutException(com.solution.service.IntegrationImplTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.solution.service.IntegrationImplTest.testIntegrationRunWithoutException(IntegrationImplTest.java:21)
-
