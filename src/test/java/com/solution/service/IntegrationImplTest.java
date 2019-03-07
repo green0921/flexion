@@ -18,7 +18,7 @@ public class IntegrationImplTest {
     @InjectMocks
     private IntegrationTestRunner integrationTestRunner;
     @InjectMocks
-    private IntegrationImpl underTest;
+    private LocalIntegration underTest;
 
     @Before
     public void setUp() {

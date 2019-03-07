@@ -1,5 +1,7 @@
 package com.solution.app;
 
+import com.flexionmobile.codingchallenge.integration.Purchase;
+import com.solution.service.WebIntegration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -16,6 +18,14 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class App {
 
     public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
+       // SpringApplication.run(App.class, args);
+        callFlexionUrl();
+    }
+
+    private static void callFlexionUrl(){
+        WebIntegration webIntegration = new WebIntegration();
+        Purchase purchase = webIntegration.buy("pen");
+        webIntegration.consume(purchase);
+        System.out.println(webIntegration.getPurchases());
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class IntegrationImpl implements Integration {
+public class LocalIntegration implements Integration {
     @Autowired
     private PurchaseRepository purchaseRepository;
     @Autowired

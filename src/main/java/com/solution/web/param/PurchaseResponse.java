@@ -2,7 +2,7 @@ package com.solution.web.param;
 
 import com.flexionmobile.codingchallenge.integration.Purchase;
 
-public class PurchaseResponse implements Purchase {
+public final class PurchaseResponse implements Purchase {
     private final String id;
     private final boolean consumed;
     private final String itemId;
@@ -26,5 +26,14 @@ public class PurchaseResponse implements Purchase {
     @Override
     public String getItemId() {
         return this.itemId;
+    }
+
+    @Override
+    public String toString() {
+        return "PurchaseResponse{" +
+                "id='" + id +
+                ", consumed=" + consumed +
+                ", itemId='" + itemId +
+                '}';
     }
 }
